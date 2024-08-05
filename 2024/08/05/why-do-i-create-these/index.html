@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KEVIN LORENTZE (Lorenz)">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie  如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我为何要创建该博客？">
+<meta property="og:url" content="https://kevin-lorentze.github.io/2024/08/05/why-do-i-create-these/index.html">
+<meta property="og:site_name" content="KEVIN LORENTZE">
+<meta property="og:description" content="技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie  如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-05T02:55:19.000Z">
+<meta property="article:modified_time" content="2024-08-05T04:03:40.350Z">
+<meta property="article:author" content="KEVIN LORENTZE (Lorenz)">
+<meta property="article:tag" content="2024年发布的文章">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>我为何要创建该博客？ - KEVIN LORENTZE</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"kevin-lorentze.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KEVIN LORENTZE</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="我为何要创建该博客？"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-05 10:55" pubdate>
+          2024年8月5日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">我为何要创建该博客？</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie</p>
+</blockquote>
+<p>如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其实这都不算什么，主要是因为世界上已经有很多优秀的Http服务器软件了，我也没有必要动手写一个，有现成的为什么还要动手做？</p>
+<p>再来是发布的问题。我不想去哪个哪个云服务商购买服务器，而且我还要为这个服务器承担费用。维护这个服务器也是非常耗费精力和时间的，况且我不是很会运维。服务器也容易受到攻击，市面上的防DDoS攻击的服务更加昂贵——我只是要发布一个博客，这一堆东西加起来根本负担不起。</p>
+<p>于是我使用了Hexo，这是一个简单的框架。我可以把这个项目发布到Github上，Github提供了Pages服务，这也就有了我现在的<a href="https://kevin-lorentze.github.io/">网站</a>。这样不仅避免了我之前提到的所有 <em>麻烦</em> ，而且我还不需要昂贵的 <em>维护成本</em>。</p>
+<p>我从博客园迁移到Github Pages + Hexo主要是因为博客园有些限制。在我迁移到这里后，这些限制都可以被避免。就像是附件有大小、格式等限制，附件最多只能存100MB，一次最多只能传10MB。我并不希望有这些限制，所以我迁移了。我一开始并不认为这是最好的办法，后来还是迁移了。</p>
+<p>我为何而编程？只是为了好玩。要我放弃这一领域也不是不行，但别的领域你体会不到 “你做主” 的感受。</p>
+<p>然后是博客文章的合规问题。我写的文章不会涉及到以下任意一个不合规行为：</p>
+<ul>
+<li>赌博</li>
+<li>对未成年儿童不良引导（任何不良引导）</li>
+<li>极端暴力、宗教</li>
+<li>宣传拜金主义</li>
+<li>敏感政治内容</li>
+<li>种族歧视</li>
+<li>歧视性少数群体</li>
+<li>歧视女性</li>
+<li>反动</li>
+<li>不合规药品的制造以及贩卖</li>
+<li>盗版、恶意软件的分发</li>
+<li>不符合工信部规定的行为</li>
+<li>国家文物的贩卖</li>
+<li>诋毁、诽谤、辱骂他人</li>
+<li>歧视残障人士</li>
+</ul>
+<p>我会审查我自己的文章，确保不存在这些不符合法律的行为以及内容。我写文章时会注意避免以下方面的内容以及行为：</p>
+<ul>
+<li>宗教信仰</li>
+<li>政治话题</li>
+<li>地区文化的不尊重行为</li>
+<li>不文明用语</li>
+<li>黑话（一个特定群体内部使用的特殊语言或术语，这些语言或术语对外部人士来说可能难以理解。）</li>
+<li>知名人士相关话题</li>
+<li>网络文化</li>
+</ul>
+<p>本站托管在GitHub上，Hexo内置的Comment（评论）功能已被关闭，以便于确保不存在以上提到的违规行为以及避免的行为。若我违反这些内容，我将删除违法规则的文章并发文道歉。</p>
+<blockquote>
+<p>对大多数人来说，技术让生活更便捷。而对于有障碍的人群，技术使一切皆有可能。无障碍化意味着设计出尽可能没有使用障碍的内容，无论访问者的身体情况、认知能力以及他们访问 web 的方式是怎样的。—— Mozilla Web Docs.</p>
+</blockquote>
+<p>接着我们来谈谈A11y（Accessibility）吧。本网站对于A11y适配不是很全，后续会逐渐完善。这也是我对特殊人士的关怀。</p>
+<h2 id="Powered-by-tomorrow-由未来驱动。"><a href="#Powered-by-tomorrow-由未来驱动。" class="headerlink" title="Powered by tomorrow.  由未来驱动。"></a>Powered by tomorrow.  由未来驱动。</h2><p>在浩瀚的时间长河中，人类文明始终以一种前瞻的姿态，向着未知的彼岸迈进。我们用科技编织梦想，用创新描绘未来，这一切的动力，源自一个永恒的主题——“Powered by Tomorrow”，由未来驱动。</p>
+<p>在遥远的过去，“未来”或许只存在于科幻小说和电影中，是遥不可及的幻想。然而，随着科技的飞速发展，那些曾经的幻想正一步步变为现实。人工智能学会了理解人类的情感，无人驾驶汽车穿梭于繁忙的城市街道，虚拟现实让我们身临其境地探索遥远的星系，而量子计算则开启了超越现有计算极限的大门。这一切，都是由未来的憧憬所激发，由科技的力量所实现。</p>
+<p>“由未来驱动”不仅仅是一种口号，它是一种信念，一种对美好生活的向往和追求。它激励着科学家、工程师、艺术家和梦想家们，不断突破现有的边界，探索未知的领域。每一次技术的革新，每一次思维的飞跃，都在为人类社会的进步添砖加瓦，让我们的生活更加便捷、智能和多彩。</p>
+<p>但“由未来驱动”的意义远不止于此。它还提醒我们，面对未来的挑战和机遇，我们必须具备前瞻性的思考和行动。气候变化、资源枯竭、人口老龄化……这些都是摆在我们面前的难题，需要我们用创新的解决方案去应对。只有这样，我们才能确保地球这个家园的可持续发展，让未来成为所有人的希望之地。</p>
+<p>“Powered by Tomorrow”，这是一句充满力量的宣言，它告诉我们，未来不是静止不动的终点，而是无限可能的起点。让我们携手并进，用智慧和勇气，共创一个由未来驱动的美好明天。在这个过程中，每个人都可以成为改变世界的英雄，因为真正的力量，永远来源于我们对未来的渴望和不懈追求。</p>
+<h2 id="Tomorrow-with-A11y-A11y助力平等的未来"><a href="#Tomorrow-with-A11y-A11y助力平等的未来" class="headerlink" title="Tomorrow with A11y.  A11y助力平等的未来"></a>Tomorrow with A11y.  A11y助力平等的未来</h2><p>当我们谈论A11y——这是无障碍（Accessibility）一词在网络和科技行业中的简称，其中数字”11”代表了字母a和y之间的11个字符——我们实际上是在强调一项基本人权：确保每个人，无论其能力如何，都能平等访问和使用数字内容和服务。</p>
+<p>在我们的数字时代，无障碍设计不仅仅是道德责任，也是法律要求。它关乎创建一个包容性的环境，让视力受损者能通过屏幕阅读器流畅地浏览网页，让听力受限者能够通过字幕享受视频内容，让行动不便者能够利用语音命令或自定义键盘布局来操作设备。更重要的是，它意味着理解并尊重每个人的独特需求，将多样性与包容性融入产品和服务的每一个环节。</p>
+<p>为了实现真正的A11y，我们需要采取以下关键步骤：</p>
+<ul>
+<li><strong>意识教育</strong>：提升全社会对无障碍重要性的认识，从设计师到开发者，再到决策者，每个人都应意识到无障碍设计的价值。</li>
+<li><strong>标准遵守</strong>：遵循国际无障碍标准，如WCAG（Web Content Accessibility Guidelines），确保数字产品和服务符合最低的无障碍要求。</li>
+<li><strong>用户参与</strong>：与残障用户合作，收集反馈，确保解决方案真正满足他们的需求。</li>
+<li><strong>持续改进</strong>：无障碍是一个持续的过程，随着技术的进步和用户需求的变化，我们需要不断评估和优化我们的做法。</li>
+</ul>
+<p>在构建一个更加公平、包容的世界中，A11y扮演着至关重要的角色。它提醒我们，技术的真正力量在于它能够连接人心，跨越障碍，让每个人都能充分发挥潜力，享受数字化带来的便利和机遇。通过共同努力，我们可以打破隔阂，让数字世界成为一个更加开放、欢迎所有人的空间。</p>
+<center> Powered By Tomorrow. </center>
+<center> Tomorrow With A11y. </center>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/2024%E5%B9%B4%E5%8F%91%E5%B8%83%E7%9A%84%E6%96%87%E7%AB%A0/" class="print-no-link">#2024年发布的文章</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>我为何要创建该博客？</div>
+      <div>https://kevin-lorentze.github.io/2024/08/05/why-do-i-create-these/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KEVIN LORENTZE (Lorenz)</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-cc-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/04/WCA-2024/" title="Website Compatibility Advisory(WCA) - 网站兼容性公告/公示 2024">
+                        <span class="hidden-mobile">Website Compatibility Advisory(WCA) - 网站兼容性公告/公示 2024</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">啊喵！我们与某些名叫 “JavaScript” 的家伙失去了联系。我希望，这一切都不是你干的。</div>
+  </noscript>
+</body>
+</html>
