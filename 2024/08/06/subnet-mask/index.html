@@ -19,22 +19,27 @@
   <meta name="author" content="KEVIN LORENTZE (Lorenz)">
   <meta name="keywords" content="">
   
-    <meta name="description" content="技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie  如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其">
+    <meta name="description" content="一、什么是子网掩码子网掩码的定义子网掩码，又称网络掩码、地址掩码，是计算机网络中一个关键的概念。它是一个 32 位的二进制数，用于区分 IP 地址中的网络地址和主机地址。子网掩码的作用十分重要。  其一，它能帮助我们有效地管理网络资源，通过合理划分网络和主机部分，避免地址浪费和冲突，减少网络拥塞。 其二，增强网络的安全性，将网络划分为不同的子网，便于设置不同的访问权限和安全策略。子网掩码常见的表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我为何要创建该博客？">
-<meta property="og:url" content="https://kevin-lorentze.github.io/2024/08/05/why-do-i-create-these/index.html">
+<meta property="og:title" content="子网掩码（纯资料）">
+<meta property="og:url" content="https://kevin-lorentze.github.io/2024/08/06/subnet-mask/index.html">
 <meta property="og:site_name" content="KEVIN LORENTZE">
-<meta property="og:description" content="技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie  如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其">
+<meta property="og:description" content="一、什么是子网掩码子网掩码的定义子网掩码，又称网络掩码、地址掩码，是计算机网络中一个关键的概念。它是一个 32 位的二进制数，用于区分 IP 地址中的网络地址和主机地址。子网掩码的作用十分重要。  其一，它能帮助我们有效地管理网络资源，通过合理划分网络和主机部分，避免地址浪费和冲突，减少网络拥塞。 其二，增强网络的安全性，将网络划分为不同的子网，便于设置不同的访问权限和安全策略。子网掩码常见的表示">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-05T02:55:19.000Z">
-<meta property="article:modified_time" content="2024-08-05T04:03:40.350Z">
+<meta property="article:published_time" content="2024-08-06T05:25:39.000Z">
+<meta property="article:modified_time" content="2024-08-06T05:31:22.297Z">
 <meta property="article:author" content="KEVIN LORENTZE (Lorenz)">
-<meta property="article:tag" content="2024年发布的文章">
+<meta property="article:tag" content="Subnet Mask">
+<meta property="article:tag" content="Ethernet">
+<meta property="article:tag" content="IPv4">
+<meta property="article:tag" content="IPv6">
+<meta property="article:tag" content="Network">
+<meta property="article:tag" content="Res-Only">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>我为何要创建该博客？ - KEVIN LORENTZE</title>
+  <title>子网掩码（纯资料） - KEVIN LORENTZE</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="我为何要创建该博客？"></span>
+            <span id="subtitle" data-typed-text="子网掩码（纯资料）"></span>
           
         </div>
 
@@ -199,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-05 10:55" pubdate>
-          2024年8月5日 上午
+        <time datetime="2024-08-06 13:25" pubdate>
+          2024年8月6日 下午
         </time>
       </span>
     
@@ -211,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          1.4k 字
         
       </span>
     
@@ -222,7 +227,7 @@
         
         
         
-          18 分钟
+          12 分钟
         
       </span>
     
@@ -259,69 +264,24 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">我为何要创建该博客？</h1>
+            <h1 id="seo-header">子网掩码（纯资料）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>技术总是向前发展的，我们所做的就是试图跟上它的步伐。—— Dennis Ritchie</p>
-</blockquote>
-<p>如你所见，这个博客使用Hexo编写的，这个框架并没有很多技术含量。我并不会前端，所以这个博客是我看着教程文档写出来的。我学的是C&#x2F;C++还有Rust。我顶多编写一个服务端程序（就像是HTTP服务器软件那样），但是这样并不有趣。即便我编写出来了，我也要主动学习一些前端&#x2F;后端的内容……——其实这都不算什么，主要是因为世界上已经有很多优秀的Http服务器软件了，我也没有必要动手写一个，有现成的为什么还要动手做？</p>
-<p>再来是发布的问题。我不想去哪个哪个云服务商购买服务器，而且我还要为这个服务器承担费用。维护这个服务器也是非常耗费精力和时间的，况且我不是很会运维。服务器也容易受到攻击，市面上的防DDoS攻击的服务更加昂贵——我只是要发布一个博客，这一堆东西加起来根本负担不起。</p>
-<p>于是我使用了Hexo，这是一个简单的框架。我可以把这个项目发布到Github上，Github提供了Pages服务，这也就有了我现在的<a href="https://kevin-lorentze.github.io/">网站</a>。这样不仅避免了我之前提到的所有 <em>麻烦</em> ，而且我还不需要昂贵的 <em>维护成本</em>。</p>
-<p>我从博客园迁移到Github Pages + Hexo主要是因为博客园有些限制。在我迁移到这里后，这些限制都可以被避免。就像是附件有大小、格式等限制，附件最多只能存100MB，一次最多只能传10MB。我并不希望有这些限制，所以我迁移了。我一开始并不认为这是最好的办法，后来还是迁移了。</p>
-<p>我为何而编程？只是为了好玩。要我放弃这一领域也不是不行，但别的领域你体会不到 “你做主” 的感受。</p>
-<p>然后是博客文章的合规问题。我写的文章不会涉及到以下任意一个不合规行为：</p>
+                <h1 id="一、什么是子网掩码"><a href="#一、什么是子网掩码" class="headerlink" title="一、什么是子网掩码"></a>一、什么是子网掩码</h1><h2 id="子网掩码的定义"><a href="#子网掩码的定义" class="headerlink" title="子网掩码的定义"></a>子网掩码的定义</h2><p>子网掩码，又称网络掩码、地址掩码，是计算机网络中一个关键的概念。它是一个 32 位的二进制数，用于区分 IP 地址中的网络地址和主机地址。<br>子网掩码的作用十分重要。</p>
 <ul>
-<li>赌博</li>
-<li>对未成年儿童不良引导（任何不良引导）</li>
-<li>极端暴力、宗教</li>
-<li>宣传拜金主义</li>
-<li>敏感政治内容</li>
-<li>种族歧视</li>
-<li>歧视性少数群体</li>
-<li>歧视女性</li>
-<li>反动</li>
-<li>不合规药品的制造以及贩卖</li>
-<li>盗版、恶意软件的分发</li>
-<li>不符合工信部规定的行为</li>
-<li>国家文物的贩卖</li>
-<li>诋毁、诽谤、辱骂他人</li>
-<li>歧视残障人士</li>
+<li>其一，它能帮助我们有效地管理网络资源，通过合理划分网络和主机部分，避免地址浪费和冲突，减少网络拥塞。</li>
+<li>其二，增强网络的安全性，将网络划分为不同的子网，便于设置不同的访问权限和安全策略。<br>子网掩码常见的表示方法主要有二进制、十进制（点分十进制）和 CIDR 表示法。二进制表示如11111111.11111111.11111111.00000000，对应的十进制表示为255.255.255.0。CIDR 表示法则是在 IP 地址后加上“&#x2F;”和数字，如192.168.1.1&#x2F;24，其中“24”表示网络标识部分的位数。<br>子网掩码将 IP 地址划分为网络地址和主机地址的过程是通过逻辑“与”运算实现的。例如，对于 IP 地址192.168.10.11和子网掩码255.255.255.0，将它们转换为二进制后进行“与”运算，得到的结果就是网络地址，剩余部分则为主机地址。这种划分使得网络设备能够准确识别和处理数据包的流向，确保数据在网络中的正确传输和路由。</li>
 </ul>
-<p>我会审查我自己的文章，确保不存在这些不符合法律的行为以及内容。我写文章时会注意避免以下方面的内容以及行为：</p>
-<ul>
-<li>宗教信仰</li>
-<li>政治话题</li>
-<li>地区文化的不尊重行为</li>
-<li>不文明用语</li>
-<li>黑话（一个特定群体内部使用的特殊语言或术语，这些语言或术语对外部人士来说可能难以理解。）</li>
-<li>知名人士相关话题</li>
-<li>网络文化</li>
-</ul>
-<p>本站托管在GitHub上，Hexo内置的Comment（评论）功能已被关闭，以便于确保不存在以上提到的违规行为以及避免的行为。若我违反这些内容，我将删除违法规则的文章并发文道歉。</p>
-<blockquote>
-<p>对大多数人来说，技术让生活更便捷。而对于有障碍的人群，技术使一切皆有可能。无障碍化意味着设计出尽可能没有使用障碍的内容，无论访问者的身体情况、认知能力以及他们访问 web 的方式是怎样的。—— Mozilla Web Docs.</p>
-</blockquote>
-<p>接着我们来谈谈A11y（Accessibility）吧。本网站对于A11y适配不是很全，后续会逐渐完善。这也是我对特殊人士的关怀。</p>
-<h2 id="Powered-by-tomorrow-由未来驱动。"><a href="#Powered-by-tomorrow-由未来驱动。" class="headerlink" title="Powered by tomorrow.  由未来驱动。"></a>Powered by tomorrow.  由未来驱动。</h2><p>在浩瀚的时间长河中，人类文明始终以一种前瞻的姿态，向着未知的彼岸迈进。我们用科技编织梦想，用创新描绘未来，这一切的动力，源自一个永恒的主题——“Powered by Tomorrow”，由未来驱动。</p>
-<p>在遥远的过去，“未来”或许只存在于科幻小说和电影中，是遥不可及的幻想。然而，随着科技的飞速发展，那些曾经的幻想正一步步变为现实。人工智能学会了理解人类的情感，无人驾驶汽车穿梭于繁忙的城市街道，虚拟现实让我们身临其境地探索遥远的星系，而量子计算则开启了超越现有计算极限的大门。这一切，都是由未来的憧憬所激发，由科技的力量所实现。</p>
-<p>“由未来驱动”不仅仅是一种口号，它是一种信念，一种对美好生活的向往和追求。它激励着科学家、工程师、艺术家和梦想家们，不断突破现有的边界，探索未知的领域。每一次技术的革新，每一次思维的飞跃，都在为人类社会的进步添砖加瓦，让我们的生活更加便捷、智能和多彩。</p>
-<p>但“由未来驱动”的意义远不止于此。它还提醒我们，面对未来的挑战和机遇，我们必须具备前瞻性的思考和行动。气候变化、资源枯竭、人口老龄化……这些都是摆在我们面前的难题，需要我们用创新的解决方案去应对。只有这样，我们才能确保地球这个家园的可持续发展，让未来成为所有人的希望之地。</p>
-<p>“Powered by Tomorrow”，这是一句充满力量的宣言，它告诉我们，未来不是静止不动的终点，而是无限可能的起点。让我们携手并进，用智慧和勇气，共创一个由未来驱动的美好明天。在这个过程中，每个人都可以成为改变世界的英雄，因为真正的力量，永远来源于我们对未来的渴望和不懈追求。</p>
-<h2 id="Tomorrow-with-A11y-A11y助力平等的未来"><a href="#Tomorrow-with-A11y-A11y助力平等的未来" class="headerlink" title="Tomorrow with A11y.  A11y助力平等的未来"></a>Tomorrow with A11y.  A11y助力平等的未来</h2><p>当我们谈论A11y——这是无障碍（Accessibility）一词在网络和科技行业中的简称，其中数字”11”代表了字母a和y之间的11个字符——我们实际上是在强调一项基本人权：确保每个人，无论其能力如何，都能平等访问和使用数字内容和服务。</p>
-<p>在我们的数字时代，无障碍设计不仅仅是道德责任，也是法律要求。它关乎创建一个包容性的环境，让视力受损者能通过屏幕阅读器流畅地浏览网页，让听力受限者能够通过字幕享受视频内容，让行动不便者能够利用语音命令或自定义键盘布局来操作设备。更重要的是，它意味着理解并尊重每个人的独特需求，将多样性与包容性融入产品和服务的每一个环节。</p>
-<p>为了实现真正的A11y，我们需要采取以下关键步骤：</p>
-<ul>
-<li><strong>意识教育</strong>：提升全社会对无障碍重要性的认识，从设计师到开发者，再到决策者，每个人都应意识到无障碍设计的价值。</li>
-<li><strong>标准遵守</strong>：遵循国际无障碍标准，如WCAG（Web Content Accessibility Guidelines），确保数字产品和服务符合最低的无障碍要求。</li>
-<li><strong>用户参与</strong>：与残障用户合作，收集反馈，确保解决方案真正满足他们的需求。</li>
-<li><strong>持续改进</strong>：无障碍是一个持续的过程，随着技术的进步和用户需求的变化，我们需要不断评估和优化我们的做法。</li>
-</ul>
-<p>在构建一个更加公平、包容的世界中，A11y扮演着至关重要的角色。它提醒我们，技术的真正力量在于它能够连接人心，跨越障碍，让每个人都能充分发挥潜力，享受数字化带来的便利和机遇。通过共同努力，我们可以打破隔阂，让数字世界成为一个更加开放、欢迎所有人的空间。</p>
-<center> Powered By Tomorrow. </center>
-<center> Tomorrow With A11y. </center>
+<h1 id="二、我们为什么需要子网掩码"><a href="#二、我们为什么需要子网掩码" class="headerlink" title="二、我们为什么需要子网掩码"></a>二、我们为什么需要子网掩码</h1><h2 id="划分网络以更有效地管理资源"><a href="#划分网络以更有效地管理资源" class="headerlink" title="划分网络以更有效地管理资源"></a>划分网络以更有效地管理资源</h2><p>子网掩码使得我们能够将一个大型网络划分为多个子网。例如，对于一个拥有众多设备的公司网络，通过合理设置子网掩码，可以将不同部门或区域的设备划分到不同的子网中。这样一来，网络管理员能够更有针对性地分配和管理IP地址资源，避免资源的浪费和混乱。据统计，在未使用子网掩码进行划分的网络中，IP地址的浪费率可能高达30%以上。</p>
+<h2 id="减少网络拥塞和冲突"><a href="#减少网络拥塞和冲突" class="headerlink" title="减少网络拥塞和冲突"></a>减少网络拥塞和冲突</h2><p>当网络规模较大时，数据传输容易出现拥塞和冲突。子网掩码通过划分子网，将数据流量限制在特定的子网范围内，减少了跨子网的不必要的数据传输，从而降低了网络拥塞和冲突的发生概率。以一个拥有数千台设备的校园网为例，使用子网掩码进行合理划分后，网络拥塞情况得到了显著改善，数据传输效率提高了约20%。</p>
+<h2 id="提高网络安全性"><a href="#提高网络安全性" class="headerlink" title="提高网络安全性"></a>提高网络安全性</h2><p>通过子网掩码划分出不同的子网，我们可以为每个子网设置不同的访问权限和安全策略。例如，将重要的服务器和机密数据所在的子网与普通用户所在的子网隔离开来，限制外部网络对敏感子网的访问，有效防止未经授权的访问和攻击，降低了网络被入侵的风险。</p>
+<h2 id="降低网络崩溃风险"><a href="#降低网络崩溃风险" class="headerlink" title="降低网络崩溃风险"></a>降低网络崩溃风险</h2><p>合理配置子网掩码可以使网络更加稳定。当某个子网出现故障时，由于子网之间的独立性，故障不会轻易扩散到整个网络，从而降低了网络崩溃的可能性。在一些复杂的企业网络中，子网掩码的正确使用能够将网络故障的影响范围缩小约70%。</p>
+<h2 id="增强网络性能，减少广播和冲突"><a href="#增强网络性能，减少广播和冲突" class="headerlink" title="增强网络性能，减少广播和冲突"></a>增强网络性能，减少广播和冲突</h2><p>子网掩码能够限制广播域的大小，减少广播流量。在大型网络中，广播流量过多会严重影响网络性能。通过子网掩码划分子网，使得广播只在子网内传播，大大降低了广播对整个网络的影响，提高了数据传输的效率和可靠性。据实际测试，优化子网掩码设置后，网络的传输效率提升了约15%。</p>
+<h1 id="三、IPv6-需要子网掩码吗"><a href="#三、IPv6-需要子网掩码吗" class="headerlink" title="三、IPv6 需要子网掩码吗"></a>三、IPv6 需要子网掩码吗</h1><h2 id="IPv6-中的前缀长度"><a href="#IPv6-中的前缀长度" class="headerlink" title="IPv6 中的前缀长度"></a>IPv6 中的前缀长度</h2><p>IPv6 中并没有传统 IPv4 意义上的子网掩码，但存在类似于子网掩码概念的前缀长度。前缀长度在 IPv6 地址中起着关键作用，用于标识网络部分的位数。<br>例如，2001:0db8:85a3:0000:0000:8a2e:0370:7334&#x2F;64中的64就是前缀长度，表示前 64 位为网络部分，后 64 位为主机部分。<br>其使用方式相对灵活，通过调整前缀长度，可以实现对 IPv6 地址的精细划分和分配。</p>
+<h2 id="IPv6-与-IPv4-子网掩码概念的差异"><a href="#IPv6-与-IPv4-子网掩码概念的差异" class="headerlink" title="IPv6 与 IPv4 子网掩码概念的差异"></a>IPv6 与 IPv4 子网掩码概念的差异</h2><p>IPv4 子网掩码通常是一个 32 位的二进制数，如255.255.255.0，通过与 IP 地址进行逻辑运算来确定网络和主机部分。<br>而 IPv6 采用前缀长度，用一个整数表示网络部分的位数，范围从 0 到 128 。<br>IPv4 的子网划分相对较为复杂，需要精确计算子网掩码。IPv6 的前缀长度则更简洁直观，便于管理和配置。<br>此外，IPv6 拥有巨大的地址空间，子网的概念相对 IPv4 有所淡化，但在实际网络规划中，合理设置前缀长度仍具有重要意义。</p>
+
                 
               </div>
             
@@ -333,7 +293,17 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/2024%E5%B9%B4%E5%8F%91%E5%B8%83%E7%9A%84%E6%96%87%E7%AB%A0/" class="print-no-link">#2024年发布的文章</a>
+        <a href="/tags/Subnet-Mask/" class="print-no-link">#Subnet Mask</a>
+      
+        <a href="/tags/Ethernet/" class="print-no-link">#Ethernet</a>
+      
+        <a href="/tags/IPv4/" class="print-no-link">#IPv4</a>
+      
+        <a href="/tags/IPv6/" class="print-no-link">#IPv6</a>
+      
+        <a href="/tags/Network/" class="print-no-link">#Network</a>
+      
+        <a href="/tags/Res-Only/" class="print-no-link">#Res-Only</a>
       
     </div>
   
@@ -345,8 +315,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>我为何要创建该博客？</div>
-      <div>https://kevin-lorentze.github.io/2024/08/05/why-do-i-create-these/</div>
+      <div>子网掩码（纯资料）</div>
+      <div>https://kevin-lorentze.github.io/2024/08/06/subnet-mask/</div>
     </div>
     <div class="license-meta">
       
@@ -358,7 +328,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月5日</div>
+          <div>2024年8月6日</div>
         </div>
       
       
@@ -402,18 +372,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/06/subnet-mask/" title="子网掩码（纯资料）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">子网掩码（纯资料）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/04/WCA-2024/" title="Website Compatibility Advisory(WCA) - 网站兼容性公告/公示 2024">
-                        <span class="hidden-mobile">Website Compatibility Advisory(WCA) - 网站兼容性公告/公示 2024</span>
+                      <a href="/2024/08/05/why-do-i-create-these/" title="我为何要创建该博客？">
+                        <span class="hidden-mobile">我为何要创建该博客？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
